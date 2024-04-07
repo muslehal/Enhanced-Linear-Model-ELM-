@@ -1,0 +1,76 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>3f63733c-40aa-412e-88f8-32b2bcf8d893</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>main.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>ELM</Name>
+    <RootNamespace>ELM</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="callback\basics.py" />
+    <Compile Include="callback\core.py" />
+    <Compile Include="callback\distributed.py" />
+    <Compile Include="callback\patch_mask.py" />
+    <Compile Include="callback\revin.py" />
+    <Compile Include="callback\scheduler.py" />
+    <Compile Include="callback\tracking.py" />
+    <Compile Include="callback\transforms.py" />
+    <Compile Include="callback\__init__.py" />
+    <Compile Include="datautils.py" />
+    <Compile Include="data\datamodule.py" />
+    <Compile Include="data\pred_dataset.py" />
+    <Compile Include="data\timefeatures.py" />
+    <Compile Include="data\__init__.py" />
+    <Compile Include="ELM.py" />
+    <Compile Include="integrate.py" />
+    <Compile Include="learner.py" />
+    <Compile Include="metrics.py" />
+    <Compile Include="main.py" />
+    <Compile Include="utils.py" />
+    <Compile Include="__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="callback\" />
+    <Folder Include="callback\__pycache__\" />
+    <Folder Include="data\" />
+    <Folder Include="data\__pycache__\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="callback\__pycache__\basics.cpython-310.pyc" />
+    <Content Include="callback\__pycache__\core.cpython-310.pyc" />
+    <Content Include="callback\__pycache__\distributed.cpython-310.pyc" />
+    <Content Include="callback\__pycache__\patch_mask.cpython-310.pyc" />
+    <Content Include="callback\__pycache__\revin.cpython-310.pyc" />
+    <Content Include="callback\__pycache__\scheduler.cpython-310.pyc" />
+    <Content Include="callback\__pycache__\tracking.cpython-310.pyc" />
+    <Content Include="callback\__pycache__\transforms.cpython-310.pyc" />
+    <Content Include="callback\__pycache__\__init__.cpython-310.pyc" />
+    <Content Include="data\__pycache__\datamodule.cpython-310.pyc" />
+    <Content Include="data\__pycache__\pred_dataset.cpython-310.pyc" />
+    <Content Include="data\__pycache__\timefeatures.cpython-310.pyc" />
+    <Content Include="data\__pycache__\__init__.cpython-310.pyc" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
